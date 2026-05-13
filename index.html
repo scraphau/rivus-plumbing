@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivus Plumbing – Plumber Northern Beaches Sydney</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+  --navy: #0b1f3a;
+  --navy-mid: #142d52;
+  --blue: #1a5ca8;
+  --orange: #f07020;
+  --orange-dark: #d45f10;
+  --white: #ffffff;
+  --off-white: #f4f7fb;
+  --light-grey: #e8edf4;
+  --mid-grey: #8a9ab5;
+  --text: #1a2538;
+  --text-light: #4a5a72;
+  --border: #d0dae8;
+}
+body { font-family: 'Barlow', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+
+/* TOP BAR */
+.topbar { background: var(--navy); padding: 9px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.topbar-left { display: flex; align-items: center; gap: 20px; color: rgba(255,255,255,0.65); font-size: 0.82rem; }
+.topbar-tag { display: flex; align-items: center; gap: 7px; }
+.topbar-badge { background: var(--orange); color: var(--white); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; }
+.topbar-phone { color: var(--white); font-size: 1.05rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.topbar-phone:hover { color: var(--orange); }
+
+/* NAV */
+nav { background: var(--white); border-bottom: 3px solid var(--orange); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 68px; }
+.nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+.nav-logo .badge { background: var(--orange); color: var(--white); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; margin-top: 4px; }
+.nav-links { display: flex; list-style: none; gap: 2px; }
+.nav-links a { padding: 8px 13px; font-size: 0.87rem; font-weight: 600; color: var(--text); border-radius: 3px; transition: color 0.2s, background 0.2s; }
+.nav-links a:hover { color: var(--blue); background: var(--off-white); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 10px 20px !important; font-weight: 700 !important; }
+.nav-cta:hover { background: var(--orange-dark) !important; }
+
+/* HERO */
+.hero { position: relative; min-height: 580px; display: flex; align-items: center; background: var(--navy); overflow: hidden; }
+.hero-pattern { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E"); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(11,31,58,0.98) 0%, rgba(11,31,58,0.88) 52%, rgba(26,92,168,0.55) 100%); z-index: 1; }
+.hero-content { position: relative; z-index: 2; padding: 80px 5%; max-width: 700px; }
+.hero-pretitle { display: inline-flex; align-items: center; gap: 8px; background: rgba(240,112,32,0.15); border: 1px solid rgba(240,112,32,0.4); color: var(--orange); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; margin-bottom: 20px; }
+.hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.8rem, 6vw, 4.8rem); font-weight: 800; line-height: 1.0; color: var(--white); text-transform: uppercase; margin-bottom: 18px; }
+.hero h1 span { color: var(--orange); }
+.hero-sub { font-size: 1.05rem; line-height: 1.65; color: rgba(255,255,255,0.7); max-width: 520px; margin-bottom: 32px; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 36px; }
+.btn-orange { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: var(--white); font-size: 0.95rem; font-weight: 700; padding: 15px 30px; border-radius: 3px; letter-spacing: 0.04em; text-transform: uppercase; transition: background 0.2s, transform 0.15s; }
+.btn-orange:hover { background: var(--orange-dark); transform: translateY(-1px); }
+.btn-ghost-white { display: inline-flex; align-items: center; gap: 8px; border: 2px solid rgba(255,255,255,0.35); color: var(--white); font-size: 0.9rem; font-weight: 600; padding: 13px 26px; border-radius: 3px; letter-spacing: 0.04em; text-transform: uppercase; transition: border-color 0.2s, background 0.2s; }
+.btn-ghost-white:hover { border-color: var(--white); background: rgba(255,255,255,0.07); }
+.hero-trust { display: flex; gap: 22px; flex-wrap: wrap; }
+.hero-trust-item { display: flex; align-items: center; gap: 7px; color: rgba(255,255,255,0.62); font-size: 0.82rem; font-weight: 500; }
+.hero-trust-item::before { content: '✓'; color: var(--orange); font-weight: 700; }
+
+/* QUOTE PANEL */
+.hero-panel { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); z-index: 3; background: var(--white); border-radius: 5px; padding: 30px 26px; width: 295px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.hero-panel-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--navy); text-transform: uppercase; text-align: center; border-bottom: 2px solid var(--orange); padding-bottom: 12px; margin-bottom: 18px; }
+.qform input, .qform select, .qform textarea { width: 100%; padding: 10px 13px; border: 1.5px solid var(--border); border-radius: 3px; font-family: 'Barlow', sans-serif; font-size: 0.87rem; color: var(--text); background: var(--off-white); margin-bottom: 9px; appearance: none; }
+.qform input:focus, .qform select:focus, .qform textarea:focus { outline: none; border-color: var(--blue); background: var(--white); }
+.qform textarea { height: 66px; resize: none; }
+.qform .qbtn { width: 100%; background: var(--orange); color: var(--white); font-family: 'Barlow', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 13px; border: none; border-radius: 3px; cursor: pointer; transition: background 0.2s; }
+.qform .qbtn:hover { background: var(--orange-dark); }
+
+/* TRUST STRIP */
+.trust-strip { background: var(--navy-mid); display: grid; grid-template-columns: repeat(4,1fr); border-bottom: 3px solid var(--orange); }
+.ts-item { display: flex; align-items: center; gap: 13px; padding: 20px 22px; border-right: 1px solid rgba(255,255,255,0.07); }
+.ts-item:last-child { border-right: none; }
+.ts-icon { width: 42px; height: 42px; background: var(--orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--white); }
+.ts-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 1px; }
+.ts-val { font-size: 0.9rem; font-weight: 600; color: var(--white); }
+
+/* SECTIONS */
+.sec { padding: 70px 5%; }
+.sec-alt { background: var(--off-white); }
+.sec-dark { background: var(--navy); }
+.sec-lbl { display: inline-flex; align-items: center; gap: 8px; color: var(--orange); font-size: 0.73rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; }
+.sec-lbl::before { content: ''; width: 20px; height: 2px; background: var(--orange); display: block; }
+.sec-h { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 800; text-transform: uppercase; line-height: 1.05; color: var(--navy); margin-bottom: 10px; }
+.sec-h-w { color: var(--white); }
+.sec-p { font-size: 0.97rem; line-height: 1.65; color: var(--text-light); max-width: 540px; }
+.sec-p-w { color: rgba(255,255,255,0.62); }
+
+/* WHY US */
+.why-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; margin-top: 44px; }
+.why-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 5px; padding: 30px 22px; text-align: center; transition: all 0.22s; }
+.why-card:hover { border-color: var(--orange); box-shadow: 0 8px 28px rgba(240,112,32,0.1); transform: translateY(-3px); }
+.why-icon { width: 58px; height: 58px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--orange); }
+.why-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.12rem; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 7px; }
+.why-card p { font-size: 0.85rem; line-height: 1.58; color: var(--text-light); }
+
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-img { position: relative; }
+.about-img-box { width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, var(--navy-mid), var(--blue)); border-radius: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.about-img-box svg { width: 160px; height: 160px; opacity: 0.2; color: var(--white); }
+.about-badge { position: absolute; bottom: -18px; right: -16px; width: 106px; height: 106px; background: var(--orange); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--white); box-shadow: 0 8px 24px rgba(240,112,32,0.4); }
+.ab-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2.1rem; font-weight: 800; line-height: 1; }
+.ab-lbl { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-align: center; line-height: 1.25; }
+.about-body p { font-size: 0.97rem; line-height: 1.74; color: var(--text-light); margin-top: 14px; }
+.checks { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 22px; }
+.check { display: flex; align-items: center; gap: 7px; font-size: 0.86rem; font-weight: 600; color: var(--text); }
+.check::before { content: '✓'; color: var(--orange); font-weight: 800; flex-shrink: 0; }
+.about-phone { display: flex; align-items: center; gap: 14px; margin-top: 26px; padding: 16px 20px; background: var(--navy); border-radius: 4px; border-left: 4px solid var(--orange); }
+.about-phone svg { color: var(--orange); flex-shrink: 0; }
+.about-phone .lbl { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+.about-phone a { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--white); display: block; }
+.about-phone a:hover { color: var(--orange); }
+
+/* SERVICES */
+.svc-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin-top: 44px; }
+.svc-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 5px; padding: 26px 20px; transition: all 0.22s; }
+.svc-card:hover { border-color: var(--blue); box-shadow: 0 6px 22px rgba(26,92,168,0.1); transform: translateY(-2px); }
+.svc-card:hover .svc-ic { background: var(--blue); }
+.svc-ic { width: 50px; height: 50px; background: var(--navy); border-radius: 5px; display: flex; align-items: center; justify-content: center; color: var(--orange); font-size: 1.35rem; margin-bottom: 14px; transition: background 0.2s; }
+.svc-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.08rem; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 5px; }
+.svc-card p { font-size: 0.82rem; line-height: 1.54; color: var(--text-light); }
+.svc-more { display: inline-flex; align-items: center; gap: 4px; margin-top: 11px; font-size: 0.79rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange); }
+.svc-more:hover { color: var(--orange-dark); }
+
+/* EMERGENCY */
+.emergency { background: var(--orange); padding: 28px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+.emrg-txt { display: flex; align-items: center; gap: 14px; color: var(--white); }
+.emrg-txt h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.55rem; font-weight: 800; text-transform: uppercase; line-height: 1.05; }
+.emrg-txt p { font-size: 0.88rem; opacity: 0.9; margin-top: 2px; }
+.btn-white { display: inline-flex; align-items: center; gap: 9px; background: var(--white); color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; padding: 13px 30px; border-radius: 3px; flex-shrink: 0; transition: background 0.2s; }
+.btn-white:hover { background: var(--off-white); }
+
+/* REVIEWS */
+.reviews-top { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 18px; margin-bottom: 38px; }
+.gscore { display: flex; align-items: center; gap: 13px; background: var(--white); border: 1.5px solid var(--border); border-radius: 5px; padding: 13px 18px; }
+.gscore-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2.9rem; font-weight: 800; line-height: 1; color: var(--navy); }
+.gscore-stars { color: #f5a623; font-size: 1.05rem; letter-spacing: 3px; margin-bottom: 2px; }
+.gscore-sub { font-size: 0.73rem; color: var(--text-light); }
+.rev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.rev-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 5px; padding: 26px; transition: box-shadow 0.2s; }
+.rev-card:hover { box-shadow: 0 6px 22px rgba(0,0,0,0.07); }
+.rev-stars { color: #f5a623; font-size: 0.9rem; letter-spacing: 3px; margin-bottom: 11px; }
+.rev-text { font-size: 0.92rem; line-height: 1.68; color: var(--text); margin-bottom: 15px; }
+.rev-author { font-size: 0.82rem; font-weight: 700; color: var(--navy); }
+.rev-src { font-size: 0.73rem; color: var(--text-light); margin-top: 2px; }
+
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.45fr; gap: 52px; align-items: start; }
+.cd-item { display: flex; align-items: flex-start; gap: 13px; margin-bottom: 16px; padding: 15px 16px; background: rgba(255,255,255,0.05); border-radius: 4px; border-left: 3px solid var(--orange); }
+.cd-item svg { color: var(--orange); flex-shrink: 0; margin-top: 1px; }
+.cd-lbl { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.42); margin-bottom: 2px; }
+.cd-val { font-size: 1rem; font-weight: 700; color: var(--white); }
+.cd-val a { color: var(--white); }
+.cd-val a:hover { color: var(--orange); }
+.cform-box { background: var(--white); border-radius: 5px; padding: 34px 30px; box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
+.cform-box h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.45rem; font-weight: 800; text-transform: uppercase; color: var(--navy); margin-bottom: 3px; }
+.cform-box .sub { font-size: 0.84rem; color: var(--text-light); margin-bottom: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+.cform label { display: block; font-size: 0.73rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text); margin-bottom: 4px; }
+.cform input, .cform select, .cform textarea { width: 100%; padding: 11px 13px; border: 1.5px solid var(--border); border-radius: 3px; font-family: 'Barlow', sans-serif; font-size: 0.89rem; color: var(--text); background: var(--off-white); margin-bottom: 12px; appearance: none; transition: border-color 0.2s, background 0.2s; }
+.cform input:focus, .cform select:focus, .cform textarea:focus { outline: none; border-color: var(--blue); background: var(--white); }
+.cform textarea { height: 85px; resize: vertical; }
+.cform .fld { margin-bottom: 0; }
+.btn-sub { width: 100%; background: var(--orange); color: var(--white); font-family: 'Barlow', sans-serif; font-size: 0.97rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px; border: none; border-radius: 3px; cursor: pointer; margin-top: 4px; transition: background 0.2s; }
+.btn-sub:hover { background: var(--orange-dark); }
+
+/* FOOTER */
+footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); }
+.foot-grid { display: grid; grid-template-columns: 1.55fr 1fr 1fr 1fr; gap: 36px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.foot-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--white); display: block; margin-bottom: 10px; }
+.foot-logo span { color: var(--orange); }
+.foot-desc { font-size: 0.84rem; line-height: 1.63; margin-bottom: 18px; max-width: 255px; }
+.foot-ph { display: flex; align-items: center; gap: 9px; color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 700; }
+.foot-ph:hover { opacity: 0.8; }
+.foot-col-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--white); margin-bottom: 14px; padding-bottom: 9px; border-bottom: 2px solid var(--orange); display: inline-block; }
+.foot-links { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.foot-links a { font-size: 0.84rem; color: rgba(255,255,255,0.42); transition: color 0.2s; display: flex; align-items: center; gap: 5px; }
+.foot-links a::before { content: '›'; color: var(--orange); }
+.foot-links a:hover { color: rgba(255,255,255,0.88); }
+.foot-hrs .hr-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.85rem; }
+.foot-hrs .hr-row:last-child { border: none; }
+.foot-hrs .day { color: rgba(255,255,255,0.42); }
+.foot-hrs .time { color: var(--orange); font-weight: 600; }
+.emrg-box { margin-top: 14px; padding: 11px 14px; background: rgba(240,112,32,0.12); border-radius: 4px; border-left: 3px solid var(--orange); }
+.emrg-box .e-lbl { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 2px; }
+.emrg-box .e-num { font-size: 0.93rem; font-weight: 700; color: var(--white); }
+.foot-bottom { padding: 16px 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.76rem; flex-wrap: wrap; gap: 6px; }
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .hero-panel { display: none; }
+  .svc-grid { grid-template-columns: repeat(3,1fr); }
+  .why-grid { grid-template-columns: repeat(2,1fr); }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .topbar-left .topbar-tag:not(:first-child) { display: none; }
+  .nav-links { display: none; }
+  .trust-strip { grid-template-columns: 1fr 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+  .rev-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .foot-grid { grid-template-columns: 1fr; }
+  .emergency { flex-direction: column; }
+  .reviews-top { flex-direction: column; align-items: flex-start; }
+  .form-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .svc-grid { grid-template-columns: 1fr; }
+  .trust-strip { grid-template-columns: 1fr; }
+  .checks { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+.hero-pretitle { animation: fadeUp 0.5s ease both; }
+.hero h1         { animation: fadeUp 0.55s 0.08s ease both; }
+.hero-sub        { animation: fadeUp 0.55s 0.16s ease both; }
+.hero-btns       { animation: fadeUp 0.55s 0.24s ease both; }
+.hero-trust      { animation: fadeUp 0.55s 0.3s ease both; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-tag">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Northern Beaches, Sydney
+    </div>
+    <div class="topbar-tag">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Mon–Sun · All Hours
+    </div>
+    <span class="topbar-badge">⚡ 24/7 Emergency</span>
+  </div>
+  <a href="tel:0428000488" class="topbar-phone">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    0428 000 488
+  </a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      RIVUS <span class="badge">Plumbing</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="tel:0428000488" class="nav-cta">📞 Call Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-pretitle">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Northern Beaches · Sydney
+    </div>
+    <h1>Your Local<br><span>Northern Beaches</span><br>Plumber</h1>
+    <p class="hero-sub">Rivus Plumbing delivers fast, reliable plumbing services across Sydney's Northern Beaches — from tap repairs to full system installations.</p>
+    <div class="hero-btns">
+      <a href="tel:0428000488" class="btn-orange">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 0428 000 488
+      </a>
+      <a href="#contact" class="btn-ghost-white">Get a Free Quote</a>
+    </div>
+    <div class="hero-trust">
+      <span class="hero-trust-item">Licensed & Insured</span>
+      <span class="hero-trust-item">Upfront Pricing</span>
+      <span class="hero-trust-item">5.0 ★ Google Rated</span>
+      <span class="hero-trust-item">Same Day Available</span>
+    </div>
+  </div>
+
+  <div class="hero-panel">
+    <div class="hero-panel-title">Free Quick Quote</div>
+    <form class="qform" onsubmit="return false;">
+      <input type="text" placeholder="Your Name">
+      <input type="tel" placeholder="Phone Number">
+      <select>
+        <option value="" disabled selected>Select a Service</option>
+        <option>Tap Repair / Installation</option>
+        <option>Blocked Drain</option>
+        <option>Hot Water System</option>
+        <option>Leak Detection</option>
+        <option>Toilet Repair</option>
+        <option>Pipe Repair</option>
+        <option>Emergency Plumbing</option>
+        <option>Other</option>
+      </select>
+      <textarea placeholder="Describe the issue..."></textarea>
+      <button type="submit" class="qbtn">Request a Quote →</button>
+    </form>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="ts-item">
+    <div class="ts-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+    <div><div class="ts-label">Response</div><div class="ts-val">24/7 Emergency</div></div>
+  </div>
+  <div class="ts-item">
+    <div class="ts-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+    <div><div class="ts-label">Credentials</div><div class="ts-val">Licensed & Insured</div></div>
+  </div>
+  <div class="ts-item">
+    <div class="ts-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+    <div><div class="ts-label">Pricing</div><div class="ts-val">Upfront & Transparent</div></div>
+  </div>
+  <div class="ts-item">
+    <div class="ts-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+    <div><div class="ts-label">Rating</div><div class="ts-val">5.0 ★ Google</div></div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="sec">
+  <div class="sec-lbl">Why Choose Us</div>
+  <h2 class="sec-h">Plumbing Done Right, Every Time</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <h3>24/7 Support</h3>
+      <p>Available around the clock for emergencies and urgent plumbing issues — day or night.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+      <h3>Experienced Team</h3>
+      <p>Fully qualified and licensed plumbers with the skills to fix any plumbing issue, big or small.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <h3>Transparent Pricing</h3>
+      <p>No hidden fees, no surprises. We provide upfront quotes before any work begins.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+      <h3>Customer Satisfaction</h3>
+      <p>We're not done until you're 100% happy. Our 5-star Google reviews say it all.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec sec-alt" id="about">
+  <div class="about-grid">
+    <div class="about-img">
+      <div class="about-img-box">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="20" y="40" width="18" height="40" rx="2"/>
+          <rect x="62" y="40" width="18" height="40" rx="2"/>
+          <path d="M38 60 L62 60"/>
+          <path d="M38 52 L38 44 Q38 35 50 35 Q62 35 62 44 L62 52"/>
+          <circle cx="50" cy="28" r="8"/>
+          <path d="M14 80 L86 80" stroke-linecap="round"/>
+          <path d="M29 80 L29 90 M71 80 L71 90" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="about-badge">
+        <div class="ab-num">5★</div>
+        <div class="ab-lbl">Google<br>Rated</div>
+      </div>
+    </div>
+    <div class="about-body">
+      <div class="sec-lbl">About Rivus Plumbing</div>
+      <h2 class="sec-h">Local Northern Beaches Plumber — Here For You</h2>
+      <p>Rivus Plumbing is a trusted plumbing service on Sydney's Northern Beaches. We offer fully qualified and insured plumbing — committed to fast, dependable work at competitive rates, 24 hours a day, seven days a week.</p>
+      <p>Whether it's a blocked drain at midnight or a burst pipe on a Sunday, our team is ready to respond. We use the latest tools and techniques to diagnose and fix your plumbing right the first time.</p>
+      <div class="checks">
+        <div class="check">Licensed & Insured</div>
+        <div class="check">Free Quotes</div>
+        <div class="check">Same Day Service</div>
+        <div class="check">Upfront Pricing</div>
+        <div class="check">All Work Guaranteed</div>
+        <div class="check">5-Star Rated</div>
+      </div>
+      <div class="about-phone">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div>
+          <div class="lbl">Call Us Anytime</div>
+          <a href="tel:0428000488">0428 000 488</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px;margin-bottom:44px;">
+    <div>
+      <div class="sec-lbl">What We Do</div>
+      <h2 class="sec-h">Our Plumbing Services</h2>
+    </div>
+    <a href="tel:0428000488" class="btn-orange" style="font-size:0.88rem;padding:12px 22px;">Get a Free Quote</a>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card"><div class="svc-ic">🚿</div><h3>Tap Installation & Repair</h3><p>All tap styles, mixers and fixtures installed and repaired professionally.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">🚽</div><h3>Toilet Repair & Install</h3><p>Leaking cisterns, slow flush, replacements — fully taken care of.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">🔍</div><h3>Leak Detection</h3><p>Accurate, non-invasive leak finding before damage and bills spiral.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">🔧</div><h3>Pipe Repair</h3><p>Burst, cracked and corroded pipes repaired or replaced quickly.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">🌡️</div><h3>Hot Water Systems</h3><p>Installation, repair, and replacement of all hot water systems.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">🌀</div><h3>Drain Cleaning</h3><p>Blocked drain clearing using modern jetting equipment — fast and clean.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">🏗️</div><h3>Sewer Repair & Cleaning</h3><p>Full sewer line inspection, cleaning and repair services.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">🚿</div><h3>Shower Installation</h3><p>New shower installations and complete bathroom plumbing fit-outs.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">🌿</div><h3>Outdoor Plumbing</h3><p>Garden taps, irrigation systems, and outdoor repairs.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">💧</div><h3>Sump Pump</h3><p>Sump pump installation, maintenance and emergency repair.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">⚡</div><h3>Emergency Plumbing</h3><p>24/7 emergency response for burst pipes, major leaks and urgent jobs.</p><span class="svc-more">Learn more ›</span></div>
+    <div class="svc-card"><div class="svc-ic">🔩</div><h3>General Maintenance</h3><p>Routine checks, preventative maintenance and general repairs.</p><span class="svc-more">Learn more ›</span></div>
+  </div>
+</section>
+
+<!-- EMERGENCY BANNER -->
+<div class="emergency">
+  <div class="emrg-txt">
+    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <div>
+      <h2>Plumbing Emergency? We're Available 24/7</h2>
+      <p>Don't wait — call Rivus Plumbing now for immediate assistance across the Northern Beaches.</p>
+    </div>
+  </div>
+  <a href="tel:0428000488" class="btn-white">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call 0428 000 488
+  </a>
+</div>
+
+<!-- REVIEWS -->
+<section class="sec sec-alt" id="reviews">
+  <div class="reviews-top">
+    <div>
+      <div class="sec-lbl">Customer Reviews</div>
+      <h2 class="sec-h">What Our Clients Say</h2>
+    </div>
+    <div class="gscore">
+      <div class="gscore-num">5.0</div>
+      <div>
+        <div class="gscore-stars">★★★★★</div>
+        <div class="gscore-sub">Based on Google Reviews</div>
+      </div>
+    </div>
+  </div>
+  <div class="rev-grid">
+    <div class="rev-card">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-text">Incredibly prompt and professional. Fixed a leak we'd been chasing for weeks in under an hour. Honest pricing, no hidden fees — exactly what you want from a tradie. Highly recommend Rivus Plumbing to anyone on the Northern Beaches.</p>
+      <div class="rev-author">Google Reviewer</div>
+      <div class="rev-src">Posted on Google · 5 Stars</div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-text">Used Rivus for a full hot water system replacement. Turned up on time, explained everything clearly, and left the site spotless. Will absolutely be my first call for any future plumbing work. Cannot fault the service.</p>
+      <div class="rev-author">Google Reviewer</div>
+      <div class="rev-src">Posted on Google · 5 Stars</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec sec-dark" id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="sec-lbl">Get In Touch</div>
+      <h2 class="sec-h sec-h-w">Contact Rivus Plumbing</h2>
+      <p class="sec-p sec-p-w" style="margin-bottom:26px;">Our team is available 24/7. Reach out for a free, no-obligation quote today.</p>
+      <div class="cd-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div><div class="cd-lbl">Phone</div><div class="cd-val"><a href="tel:0428000488">0428 000 488</a></div></div>
+      </div>
+      <div class="cd-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><div class="cd-lbl">Service Area</div><div class="cd-val">Northern Beaches, Sydney NSW</div></div>
+      </div>
+      <div class="cd-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><div class="cd-lbl">Hours</div><div class="cd-val">24/7 — All Days</div></div>
+      </div>
+    </div>
+    <div class="cform-box">
+      <h3>Request a Free Quote</h3>
+      <p class="sub">Fill in the form and we'll get back to you shortly.</p>
+      <form class="cform" onsubmit="return false;">
+        <div class="form-row">
+          <div class="fld"><label>First Name</label><input type="text" placeholder="John"></div>
+          <div class="fld"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="form-row">
+          <div class="fld"><label>Phone</label><input type="tel" placeholder="04XX XXX XXX"></div>
+          <div class="fld"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+        </div>
+        <div class="fld"><label>Select a Service</label>
+          <select>
+            <option value="" disabled selected>Choose a service...</option>
+            <option>Tap Repair / Installation</option>
+            <option>Blocked Drain</option>
+            <option>Hot Water System</option>
+            <option>Leak Detection</option>
+            <option>Toilet Repair / Installation</option>
+            <option>Pipe Repair</option>
+            <option>Sewer / Drainage</option>
+            <option>Shower Installation</option>
+            <option>Emergency Plumbing</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fld"><label>Message</label><textarea placeholder="Tell us about the issue..."></textarea></div>
+        <button type="submit" class="btn-sub">Send My Request →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div>
+      <span class="foot-logo">RIVUS<span>.</span></span>
+      <p class="foot-desc">Reliable, licensed plumbing across Sydney's Northern Beaches. Available 24/7 for emergencies and all plumbing needs.</p>
+      <a href="tel:0428000488" class="foot-ph">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0428 000 488
+      </a>
+    </div>
+    <div>
+      <div class="foot-col-title">Quick Links</div>
+      <ul class="foot-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Our Services</div>
+      <ul class="foot-links">
+        <li><a href="#">Tap Repair</a></li>
+        <li><a href="#">Blocked Drains</a></li>
+        <li><a href="#">Hot Water Systems</a></li>
+        <li><a href="#">Leak Detection</a></li>
+        <li><a href="#">Sewer Repair</a></li>
+        <li><a href="#">Emergency Plumbing</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Working Hours</div>
+      <div class="foot-hrs">
+        <div class="hr-row"><span class="day">Monday – Friday</span><span class="time">24/7</span></div>
+        <div class="hr-row"><span class="day">Saturday</span><span class="time">24/7</span></div>
+        <div class="hr-row"><span class="day">Sunday</span><span class="time">24/7</span></div>
+        <div class="hr-row"><span class="day">Public Holidays</span><span class="time">24/7</span></div>
+      </div>
+      <div class="emrg-box">
+        <div class="e-lbl">Emergency Line</div>
+        <div class="e-num">0428 000 488</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2025 Rivus Plumbing. All Rights Reserved. Northern Beaches, Sydney NSW.</span>
+    <span>Licensed & Insured Plumber</span>
+  </div>
+</footer>
+
+</body>
+</html>

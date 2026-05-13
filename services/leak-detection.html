@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leak Detection – Rivus Plumbing Northern Beaches Sydney</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root { --navy: #0b1f3a; --navy-mid: #142d52; --blue: #1a5ca8; --orange: #f07020; --orange-dark: #d45f10; --white: #ffffff; --off-white: #f4f7fb; --text: #1a2538; --text-light: #4a5a72; --border: #d0dae8; }
+body { font-family: 'Barlow', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+.topbar { background: var(--navy); padding: 9px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.topbar-left { display: flex; align-items: center; gap: 20px; color: rgba(255,255,255,0.65); font-size: 0.82rem; }
+.topbar-tag { display: flex; align-items: center; gap: 7px; }
+.topbar-badge { background: var(--orange); color: var(--white); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; }
+.topbar-phone { color: var(--white); font-size: 1.05rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.topbar-phone:hover { color: var(--orange); }
+nav { background: var(--white); border-bottom: 3px solid var(--orange); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 68px; }
+.nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+.nav-logo .badge { background: var(--orange); color: var(--white); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; margin-top: 4px; }
+.nav-links { display: flex; list-style: none; gap: 2px; }
+.nav-links a { padding: 8px 13px; font-size: 0.87rem; font-weight: 600; color: var(--text); border-radius: 3px; transition: color 0.2s, background 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--blue); background: var(--off-white); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 10px 20px !important; font-weight: 700 !important; }
+.nav-cta:hover { background: var(--orange-dark) !important; }
+.btn-orange { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: var(--white); font-size: 0.95rem; font-weight: 700; padding: 15px 30px; border-radius: 3px; letter-spacing: 0.04em; text-transform: uppercase; transition: background 0.2s, transform 0.15s; }
+.btn-orange:hover { background: var(--orange-dark); transform: translateY(-1px); }
+.btn-ghost-white { display: inline-flex; align-items: center; gap: 8px; border: 2px solid rgba(255,255,255,0.35); color: var(--white); font-size: 0.9rem; font-weight: 600; padding: 13px 26px; border-radius: 3px; letter-spacing: 0.04em; text-transform: uppercase; transition: border-color 0.2s, background 0.2s; }
+.btn-ghost-white:hover { border-color: var(--white); background: rgba(255,255,255,0.07); }
+.btn-white { display: inline-flex; align-items: center; gap: 9px; background: var(--white); color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; padding: 13px 30px; border-radius: 3px; flex-shrink: 0; transition: background 0.2s; }
+.btn-white:hover { background: var(--off-white); }
+.sec { padding: 70px 5%; }
+.sec-alt { background: var(--off-white); }
+.sec-dark { background: var(--navy); }
+.sec-lbl { display: inline-flex; align-items: center; gap: 8px; color: var(--orange); font-size: 0.73rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; }
+.sec-lbl::before { content: ''; width: 20px; height: 2px; background: var(--orange); display: block; }
+.sec-h { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 800; text-transform: uppercase; line-height: 1.05; color: var(--navy); margin-bottom: 10px; }
+.sec-h-w { color: var(--white); }
+.sec-p { font-size: 0.97rem; line-height: 1.65; color: var(--text-light); max-width: 540px; }
+.sec-p-w { color: rgba(255,255,255,0.62); }
+.why-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; margin-top: 44px; }
+.why-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 5px; padding: 30px 22px; text-align: center; transition: all 0.22s; }
+.why-card:hover { border-color: var(--orange); box-shadow: 0 8px 28px rgba(240,112,32,0.1); transform: translateY(-3px); }
+.why-icon { width: 58px; height: 58px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--orange); }
+.why-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.12rem; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 7px; }
+.why-card p { font-size: 0.85rem; line-height: 1.58; color: var(--text-light); }
+.emergency { background: var(--orange); padding: 28px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+.emrg-txt { display: flex; align-items: center; gap: 14px; color: var(--white); }
+.emrg-txt h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.55rem; font-weight: 800; text-transform: uppercase; line-height: 1.05; }
+.emrg-txt p { font-size: 0.88rem; opacity: 0.9; margin-top: 2px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.45fr; gap: 52px; align-items: start; }
+.cd-item { display: flex; align-items: flex-start; gap: 13px; margin-bottom: 16px; padding: 15px 16px; background: rgba(255,255,255,0.05); border-radius: 4px; border-left: 3px solid var(--orange); }
+.cd-item svg { color: var(--orange); flex-shrink: 0; margin-top: 1px; }
+.cd-lbl { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.42); margin-bottom: 2px; }
+.cd-val { font-size: 1rem; font-weight: 700; color: var(--white); }
+.cd-val a { color: var(--white); }
+.cd-val a:hover { color: var(--orange); }
+.cform-box { background: var(--white); border-radius: 5px; padding: 34px 30px; box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
+.cform-box h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.45rem; font-weight: 800; text-transform: uppercase; color: var(--navy); margin-bottom: 3px; }
+.cform-box .sub { font-size: 0.84rem; color: var(--text-light); margin-bottom: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+.cform label { display: block; font-size: 0.73rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text); margin-bottom: 4px; }
+.cform input, .cform select, .cform textarea { width: 100%; padding: 11px 13px; border: 1.5px solid var(--border); border-radius: 3px; font-family: 'Barlow', sans-serif; font-size: 0.89rem; color: var(--text); background: var(--off-white); margin-bottom: 12px; appearance: none; transition: border-color 0.2s; }
+.cform input:focus, .cform select:focus, .cform textarea:focus { outline: none; border-color: var(--blue); background: var(--white); }
+.cform textarea { height: 85px; resize: vertical; }
+.cform .fld { margin-bottom: 0; }
+.btn-sub { width: 100%; background: var(--orange); color: var(--white); font-family: 'Barlow', sans-serif; font-size: 0.97rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px; border: none; border-radius: 3px; cursor: pointer; margin-top: 4px; transition: background 0.2s; }
+.btn-sub:hover { background: var(--orange-dark); }
+footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); }
+.foot-grid { display: grid; grid-template-columns: 1.55fr 1fr 1fr 1fr; gap: 36px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.foot-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--white); display: block; margin-bottom: 10px; }
+.foot-logo span { color: var(--orange); }
+.foot-desc { font-size: 0.84rem; line-height: 1.63; margin-bottom: 18px; max-width: 255px; }
+.foot-ph { display: flex; align-items: center; gap: 9px; color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 700; }
+.foot-ph:hover { opacity: 0.8; }
+.foot-col-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--white); margin-bottom: 14px; padding-bottom: 9px; border-bottom: 2px solid var(--orange); display: inline-block; }
+.foot-links { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.foot-links a { font-size: 0.84rem; color: rgba(255,255,255,0.42); transition: color 0.2s; display: flex; align-items: center; gap: 5px; }
+.foot-links a::before { content: '›'; color: var(--orange); }
+.foot-links a:hover { color: rgba(255,255,255,0.88); }
+.foot-hrs .hr-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.85rem; }
+.foot-hrs .hr-row:last-child { border: none; }
+.foot-hrs .day { color: rgba(255,255,255,0.42); }
+.foot-hrs .time { color: var(--orange); font-weight: 600; }
+.emrg-box { margin-top: 14px; padding: 11px 14px; background: rgba(240,112,32,0.12); border-radius: 4px; border-left: 3px solid var(--orange); }
+.emrg-box .e-lbl { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 2px; }
+.emrg-box .e-num { font-size: 0.93rem; font-weight: 700; color: var(--white); }
+.foot-bottom { padding: 16px 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.76rem; flex-wrap: wrap; gap: 6px; }
+.page-hero { background: var(--navy); padding: 60px 5%; position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E"); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 18px; position: relative; z-index: 1; }
+.breadcrumb a { color: rgba(255,255,255,0.45); transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--orange); }
+.breadcrumb span { color: var(--orange); }
+.page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; color: var(--white); text-transform: uppercase; line-height: 1.05; margin-bottom: 14px; position: relative; z-index: 1; }
+.page-hero h1 em { color: var(--orange); font-style: normal; }
+.page-hero p { font-size: 1.02rem; color: rgba(255,255,255,0.7); max-width: 560px; margin-bottom: 28px; position: relative; z-index: 1; line-height: 1.6; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; position: relative; z-index: 1; }
+.intro-grid { display: grid; grid-template-columns: 1fr 340px; gap: 52px; align-items: start; }
+.intro-body p { font-size: 0.97rem; line-height: 1.74; color: var(--text-light); margin-bottom: 14px; }
+.check-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+.check-list li { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 600; color: var(--text); }
+.check-list li::before { content: '✓'; color: var(--orange); font-weight: 800; flex-shrink: 0; }
+.cta-card { background: var(--navy); border-radius: 5px; padding: 28px 24px; border-left: 4px solid var(--orange); }
+.cta-card .cta-lbl { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 6px; }
+.cta-card .cta-num { font-family: 'Barlow Condensed', sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--white); margin-bottom: 4px; }
+.cta-card .cta-num a { color: var(--white); }
+.cta-card .cta-num a:hover { color: var(--orange); }
+.cta-card .cta-sub { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
+.cta-card .btn-orange { width: 100%; justify-content: center; }
+.type-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 38px; }
+.type-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 5px; padding: 26px 20px; transition: all 0.22s; }
+.type-card:hover { border-color: var(--orange); box-shadow: 0 6px 22px rgba(240,112,32,0.09); transform: translateY(-2px); }
+.type-ic { font-size: 1.8rem; margin-bottom: 12px; }
+.type-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.08rem; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 6px; }
+.type-card p { font-size: 0.84rem; line-height: 1.55; color: var(--text-light); }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 38px; }
+.process-step { text-align: center; padding: 28px 18px; }
+.step-num { width: 52px; height: 52px; background: var(--orange); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 800; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+.process-step h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 7px; }
+.process-step p { font-size: 0.84rem; line-height: 1.55; color: var(--text-light); }
+@media (max-width: 1100px) { .intro-grid { grid-template-columns: 1fr; } .cta-card { max-width: 400px; } .process-grid { grid-template-columns: 1fr 1fr; } .why-grid { grid-template-columns: 1fr 1fr; } .foot-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .topbar-left .topbar-tag:not(:first-child) { display: none; } .nav-links { display: none; } .type-grid { grid-template-columns: 1fr 1fr; } .contact-grid { grid-template-columns: 1fr; } .foot-grid { grid-template-columns: 1fr; } .emergency { flex-direction: column; } .form-row { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .type-grid { grid-template-columns: 1fr; } .check-list { grid-template-columns: 1fr; } .process-grid { grid-template-columns: 1fr; } .why-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Northern Beaches, Sydney</div>
+    <div class="topbar-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sun · All Hours</div>
+    <span class="topbar-badge">⚡ 24/7 Emergency</span>
+  </div>
+  <a href="tel:0428000488" class="topbar-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 0428 000 488</a>
+</div>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">RIVUS <span class="badge">Plumbing</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#about">About Us</a></li>
+      <li><a href="../index.html#services" class="active">Services</a></li>
+      <li><a href="../index.html#reviews">Reviews</a></li>
+      <li><a href="../index.html#contact">Contact Us</a></li>
+      <li><a href="tel:0428000488" class="nav-cta">📞 Call Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../index.html#services">Services</a> › <span>Leak Detection</span></div>
+  <h1>Accurate <em>Leak Detection</em></h1>
+  <p>Hidden water leaks silently damage your home and inflate your bills. Rivus Plumbing uses specialist detection equipment to locate leaks fast — without tearing your property apart unnecessarily.</p>
+  <div class="hero-btns">
+    <a href="tel:0428000488" class="btn-orange"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call 0428 000 488</a>
+    <a href="../index.html#contact" class="btn-ghost-white">Get a Free Quote</a>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="intro-grid">
+    <div class="intro-body">
+      <div class="sec-lbl">The Problem</div>
+      <h2 class="sec-h">Hidden Leaks Cost You More Every Day</h2>
+      <p>Not all leaks are obvious. A pipe leaking inside a wall, under a slab, or beneath your garden can go undetected for months — causing mould, structural damage, and water bills that seem inexplicably high. By the time visible damage appears, thousands of dollars of harm may already be done.</p>
+      <p>Rivus Plumbing uses non-invasive leak detection methods to find exactly where your leak is — before any unnecessary excavation or demolition. We pinpoint the problem, quote the repair, and fix it properly.</p>
+      <ul class="check-list">
+        <li>In-wall leak detection</li>
+        <li>Under-slab leaks</li>
+        <li>Underground pipe leaks</li>
+        <li>Pressure testing</li>
+        <li>Water meter analysis</li>
+        <li>Acoustic detection</li>
+      </ul>
+    </div>
+    <div>
+      <div class="cta-card">
+        <div class="cta-lbl">Call Us — 24/7</div>
+        <div class="cta-num"><a href="tel:0428000488">0428 000 488</a></div>
+        <div class="cta-sub">Fast response across the Northern Beaches</div>
+        <a href="tel:0428000488" class="btn-orange"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <div class="sec-lbl">Types of Leaks We Find</div>
+  <h2 class="sec-h">Leaks We Detect & Repair</h2>
+  <div class="type-grid">
+    <div class="type-card"><div class="type-ic">🧱</div><h3>In-Wall Leaks</h3><p>Pipes behind walls can develop pinhole leaks that cause moisture, mould, and paint bubbling. We find them without unnecessary demolition.</p></div>
+    <div class="type-card"><div class="type-ic">🏗️</div><h3>Under-Slab Leaks</h3><p>Pipes in concrete slabs crack due to ground movement and age. We use pressure testing and acoustic equipment to find them precisely.</p></div>
+    <div class="type-card"><div class="type-ic">🌿</div><h3>Underground Leaks</h3><p>Leaks beneath your lawn or driveway cause soft patches, sinkholes, and water waste. We detect and repair them with minimal excavation.</p></div>
+    <div class="type-card"><div class="type-ic">📊</div><h3>High Water Bill</h3><p>If your water bill has spiked without explanation, you likely have a hidden leak. We perform a full system check to track it down.</p></div>
+    <div class="type-card"><div class="type-ic">🚿</div><h3>Shower & Bathroom Leaks</h3><p>Leaks behind shower recesses and vanities cause floor and wall rot. We detect these early before they become a costly renovation.</p></div>
+    <div class="type-card"><div class="type-ic">🔧</div><h3>Roof & Gutter Leaks</h3><p>Water penetration from roofs and gutters can be misread as a plumbing leak. We identify the true source to ensure the right fix.</p></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-lbl">How We Work</div>
+  <h2 class="sec-h">Our Leak Detection Process</h2>
+  <div class="process-grid">
+    <div class="process-step"><div class="step-num">1</div><h3>Initial Assessment</h3><p>We start with a full walkthrough, checking water meter readings, visible damp patches, and pressure across your system.</p></div>
+    <div class="process-step"><div class="step-num">2</div><h3>Non-Invasive Detection</h3><p>Using acoustic sensors and pressure testing, we pinpoint the leak location without cutting into walls or digging unnecessarily.</p></div>
+    <div class="process-step"><div class="step-num">3</div><h3>Clear Report & Quote</h3><p>We explain exactly where the leak is and what's needed to fix it, with a transparent quote before any repair work begins.</p></div>
+    <div class="process-step"><div class="step-num">4</div><h3>Repair & Confirm</h3><p>We carry out the repair and re-test the system to confirm the leak is fully resolved and your water pressure is restored.</p></div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <div class="sec-lbl">Why Choose Us</div>
+  <h2 class="sec-h">Plumbing Done Right, Every Time</h2>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>24/7 Support</h3><p>Available around the clock for emergencies and urgent plumbing issues — day or night.</p></div>
+    <div class="why-card"><div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Experienced Team</h3><p>Fully qualified and licensed plumbers with the skills to fix any plumbing issue, big or small.</p></div>
+    <div class="why-card"><div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Transparent Pricing</h3><p>No hidden fees, no surprises. We provide upfront quotes before any work begins.</p></div>
+    <div class="why-card"><div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3>Customer Satisfaction</h3><p>We're not done until you're 100% happy. Our 5-star Google reviews say it all.</p></div>
+  </div>
+</section>
+
+<div class="emergency">
+  <div class="emrg-txt"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><h2>Plumbing Emergency? We're Available 24/7</h2><p>Don't wait — call Rivus Plumbing now for immediate assistance across the Northern Beaches.</p></div></div>
+  <a href="tel:0428000488" class="btn-white"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call 0428 000 488</a>
+</div>
+
+<section class="sec sec-dark" id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="sec-lbl">Get In Touch</div>
+      <h2 class="sec-h sec-h-w">Contact Rivus Plumbing</h2>
+      <p class="sec-p sec-p-w" style="margin-bottom:26px;">Our team is available 24/7. Reach out for a free, no-obligation quote today.</p>
+      <div class="cd-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><div class="cd-lbl">Phone</div><div class="cd-val"><a href="tel:0428000488">0428 000 488</a></div></div></div>
+      <div class="cd-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="cd-lbl">Service Area</div><div class="cd-val">Northern Beaches, Sydney NSW</div></div></div>
+      <div class="cd-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><div class="cd-lbl">Hours</div><div class="cd-val">24/7 — All Days</div></div></div>
+    </div>
+    <div class="cform-box">
+      <h3>Request a Free Quote</h3>
+      <p class="sub">Fill in the form and we'll get back to you shortly.</p>
+      <form class="cform" onsubmit="return false;">
+        <div class="form-row">
+          <div class="fld"><label>First Name</label><input type="text" placeholder="John"></div>
+          <div class="fld"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="form-row">
+          <div class="fld"><label>Phone</label><input type="tel" placeholder="04XX XXX XXX"></div>
+          <div class="fld"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+        </div>
+        <div class="fld"><label>Service</label><select><option value="" disabled selected>Leak Detection</option><option>Tap Repair / Installation</option><option>Blocked Drain</option><option>Hot Water System</option><option>Pipe Repair</option><option>Emergency Plumbing</option><option>Other</option></select></div>
+        <div class="fld"><label>Message</label><textarea placeholder="Describe the issue..."></textarea></div>
+        <button type="submit" class="btn-sub">Send My Request →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div><span class="foot-logo">RIVUS<span>.</span></span><p class="foot-desc">Reliable, licensed plumbing across Sydney's Northern Beaches. Available 24/7 for emergencies and all plumbing needs.</p><a href="tel:0428000488" class="foot-ph"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 0428 000 488</a></div>
+    <div><div class="foot-col-title">Quick Links</div><ul class="foot-links"><li><a href="../index.html">Home</a></li><li><a href="../index.html#about">About Us</a></li><li><a href="../index.html#services">Services</a></li><li><a href="../index.html#reviews">Reviews</a></li><li><a href="../index.html#contact">Contact Us</a></li></ul></div>
+    <div><div class="foot-col-title">Our Services</div><ul class="foot-links"><li><a href="tap-repair.html">Tap Repair</a></li><li><a href="drain-cleaning.html">Blocked Drains</a></li><li><a href="hot-water-systems.html">Hot Water Systems</a></li><li><a href="leak-detection.html">Leak Detection</a></li><li><a href="pipe-repair.html">Pipe Repair</a></li><li><a href="emergency-plumbing.html">Emergency Plumbing</a></li></ul></div>
+    <div><div class="foot-col-title">Working Hours</div><div class="foot-hrs"><div class="hr-row"><span class="day">Monday – Friday</span><span class="time">24/7</span></div><div class="hr-row"><span class="day">Saturday</span><span class="time">24/7</span></div><div class="hr-row"><span class="day">Sunday</span><span class="time">24/7</span></div><div class="hr-row"><span class="day">Public Holidays</span><span class="time">24/7</span></div></div><div class="emrg-box"><div class="e-lbl">Emergency Line</div><div class="e-num">0428 000 488</div></div></div>
+  </div>
+  <div class="foot-bottom"><span>© 2025 Rivus Plumbing. All Rights Reserved. Northern Beaches, Sydney NSW.</span><span>Licensed &amp; Insured Plumber</span></div>
+</footer>
+</body>
+</html>

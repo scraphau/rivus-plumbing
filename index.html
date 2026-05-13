@@ -118,14 +118,14 @@ nav { background: var(--white); border-bottom: 3px solid var(--orange); position
 
 /* SERVICES */
 .svc-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin-top: 44px; }
-.svc-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 5px; padding: 26px 20px; transition: all 0.22s; }
+.svc-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 5px; padding: 26px 20px; transition: all 0.22s; display: block; cursor: pointer; }
 .svc-card:hover { border-color: var(--blue); box-shadow: 0 6px 22px rgba(26,92,168,0.1); transform: translateY(-2px); }
 .svc-card:hover .svc-ic { background: var(--blue); }
 .svc-ic { width: 50px; height: 50px; background: var(--navy); border-radius: 5px; display: flex; align-items: center; justify-content: center; color: var(--orange); font-size: 1.35rem; margin-bottom: 14px; transition: background 0.2s; }
 .svc-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.08rem; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 5px; }
 .svc-card p { font-size: 0.82rem; line-height: 1.54; color: var(--text-light); }
 .svc-more { display: inline-flex; align-items: center; gap: 4px; margin-top: 11px; font-size: 0.79rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange); }
-.svc-more:hover { color: var(--orange-dark); }
+.svc-card:hover .svc-more { color: var(--orange-dark); }
 
 /* EMERGENCY */
 .emergency { background: var(--orange); padding: 28px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
@@ -251,15 +251,15 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
+    <a href="index.html" class="nav-logo">
       RIVUS <span class="badge">Plumbing</span>
     </a>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#reviews">Reviews</a></li>
+      <li><a href="index.html#contact">Contact Us</a></li>
       <li><a href="tel:0428000488" class="nav-cta">📞 Call Now</a></li>
     </ul>
   </div>
@@ -415,18 +415,18 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
     <a href="tel:0428000488" class="btn-orange" style="font-size:0.88rem;padding:12px 22px;">Get a Free Quote</a>
   </div>
   <div class="svc-grid">
-    <div class="svc-card"><div class="svc-ic">🚿</div><h3>Tap Installation & Repair</h3><p>All tap styles, mixers and fixtures installed and repaired professionally.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">🚽</div><h3>Toilet Repair & Install</h3><p>Leaking cisterns, slow flush, replacements — fully taken care of.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">🔍</div><h3>Leak Detection</h3><p>Accurate, non-invasive leak finding before damage and bills spiral.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">🔧</div><h3>Pipe Repair</h3><p>Burst, cracked and corroded pipes repaired or replaced quickly.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">🌡️</div><h3>Hot Water Systems</h3><p>Installation, repair, and replacement of all hot water systems.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">🌀</div><h3>Drain Cleaning</h3><p>Blocked drain clearing using modern jetting equipment — fast and clean.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">🏗️</div><h3>Sewer Repair & Cleaning</h3><p>Full sewer line inspection, cleaning and repair services.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">🚿</div><h3>Shower Installation</h3><p>New shower installations and complete bathroom plumbing fit-outs.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">🌿</div><h3>Outdoor Plumbing</h3><p>Garden taps, irrigation systems, and outdoor repairs.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">💧</div><h3>Sump Pump</h3><p>Sump pump installation, maintenance and emergency repair.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">⚡</div><h3>Emergency Plumbing</h3><p>24/7 emergency response for burst pipes, major leaks and urgent jobs.</p><span class="svc-more">Learn more ›</span></div>
-    <div class="svc-card"><div class="svc-ic">🔩</div><h3>General Maintenance</h3><p>Routine checks, preventative maintenance and general repairs.</p><span class="svc-more">Learn more ›</span></div>
+    <a href="services/tap-installation-repair.html" class="svc-card"><div class="svc-ic">🚿</div><h3>Tap Installation & Repair</h3><p>All tap styles, mixers and fixtures installed and repaired professionally.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/toilet-repair-install.html" class="svc-card"><div class="svc-ic">🚽</div><h3>Toilet Repair & Install</h3><p>Leaking cisterns, slow flush, replacements — fully taken care of.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/leak-detection.html" class="svc-card"><div class="svc-ic">🔍</div><h3>Leak Detection</h3><p>Accurate, non-invasive leak finding before damage and bills spiral.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/pipe-repair.html" class="svc-card"><div class="svc-ic">🔧</div><h3>Pipe Repair</h3><p>Burst, cracked and corroded pipes repaired or replaced quickly.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/hot-water-systems.html" class="svc-card"><div class="svc-ic">🌡️</div><h3>Hot Water Systems</h3><p>Installation, repair, and replacement of all hot water systems.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/drain-cleaning.html" class="svc-card"><div class="svc-ic">🌀</div><h3>Drain Cleaning</h3><p>Blocked drain clearing using modern jetting equipment — fast and clean.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/sewer-repair-cleaning.html" class="svc-card"><div class="svc-ic">🏗️</div><h3>Sewer Repair & Cleaning</h3><p>Full sewer line inspection, cleaning and repair services.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/shower-installation.html" class="svc-card"><div class="svc-ic">🚿</div><h3>Shower Installation</h3><p>New shower installations and complete bathroom plumbing fit-outs.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/outdoor-plumbing.html" class="svc-card"><div class="svc-ic">🌿</div><h3>Outdoor Plumbing</h3><p>Garden taps, irrigation systems, and outdoor repairs.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/sump-pump.html" class="svc-card"><div class="svc-ic">💧</div><h3>Sump Pump</h3><p>Sump pump installation, maintenance and emergency repair.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/emergency-plumbing.html" class="svc-card"><div class="svc-ic">⚡</div><h3>Emergency Plumbing</h3><p>24/7 emergency response for burst pipes, major leaks and urgent jobs.</p><span class="svc-more">Learn more ›</span></a>
+    <a href="services/general-maintenance.html" class="svc-card"><div class="svc-ic">🔩</div><h3>General Maintenance</h3><p>Routine checks, preventative maintenance and general repairs.</p><span class="svc-more">Learn more ›</span></a>
   </div>
 </section>
 
@@ -544,22 +544,22 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
     <div>
       <div class="foot-col-title">Quick Links</div>
       <ul class="foot-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
       </ul>
     </div>
     <div>
       <div class="foot-col-title">Our Services</div>
       <ul class="foot-links">
-        <li><a href="#">Tap Repair</a></li>
-        <li><a href="#">Blocked Drains</a></li>
-        <li><a href="#">Hot Water Systems</a></li>
-        <li><a href="#">Leak Detection</a></li>
-        <li><a href="#">Sewer Repair</a></li>
-        <li><a href="#">Emergency Plumbing</a></li>
+        <li><a href="services/tap-installation-repair.html">Tap Repair</a></li>
+        <li><a href="services/drain-cleaning.html">Blocked Drains</a></li>
+        <li><a href="services/hot-water-systems.html">Hot Water Systems</a></li>
+        <li><a href="services/leak-detection.html">Leak Detection</a></li>
+        <li><a href="services/sewer-repair-cleaning.html">Sewer Repair</a></li>
+        <li><a href="services/emergency-plumbing.html">Emergency Plumbing</a></li>
       </ul>
     </div>
     <div>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – Rivus Plumbing Northern Beaches Sydney</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root { --navy: #0b1f3a; --navy-mid: #142d52; --blue: #1a5ca8; --orange: #f07020; --orange-dark: #d45f10; --white: #ffffff; --off-white: #f4f7fb; --text: #1a2538; --text-light: #4a5a72; --border: #d0dae8; }
+body { font-family: 'Barlow', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+.topbar { background: var(--navy); padding: 9px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.topbar-left { display: flex; align-items: center; gap: 20px; color: rgba(255,255,255,0.65); font-size: 0.82rem; }
+.topbar-tag { display: flex; align-items: center; gap: 7px; }
+.topbar-badge { background: var(--orange); color: var(--white); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; }
+.topbar-phone { color: var(--white); font-size: 1.05rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.topbar-phone:hover { color: var(--orange); }
+nav { background: var(--white); border-bottom: 3px solid var(--orange); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 68px; }
+.nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+.nav-logo .badge { background: var(--orange); color: var(--white); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; margin-top: 4px; }
+.nav-links { display: flex; list-style: none; gap: 2px; }
+.nav-links a { padding: 8px 13px; font-size: 0.87rem; font-weight: 600; color: var(--text); border-radius: 3px; transition: color 0.2s, background 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--blue); background: var(--off-white); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 10px 20px !important; font-weight: 700 !important; }
+.nav-cta:hover { background: var(--orange-dark) !important; }
+.nav-links .has-dropdown { position: relative; }
+.nav-links .has-dropdown > a::after { content: ' ▾'; font-size: 0.7rem; opacity: 0.7; }
+.nav-dropdown { display: none; position: absolute; top: 100%; left: 0; background: var(--white); min-width: 240px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-top: 3px solid var(--orange); border-radius: 0 0 4px 4px; padding: 8px 0; list-style: none; z-index: 200; }
+.nav-links .has-dropdown:hover .nav-dropdown { display: block; }
+.nav-dropdown a { display: block; padding: 10px 18px !important; font-size: 0.84rem; color: var(--text); border-radius: 0 !important; white-space: nowrap; }
+.nav-dropdown a:hover { background: var(--off-white) !important; color: var(--orange) !important; }
+.btn-orange { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: var(--white); font-size: 0.95rem; font-weight: 700; padding: 15px 30px; border-radius: 3px; letter-spacing: 0.04em; text-transform: uppercase; transition: background 0.2s; }
+.btn-orange:hover { background: var(--orange-dark); }
+.btn-ghost-white { display: inline-flex; align-items: center; gap: 8px; border: 2px solid rgba(255,255,255,0.35); color: var(--white); font-size: 0.9rem; font-weight: 600; padding: 13px 26px; border-radius: 3px; letter-spacing: 0.04em; text-transform: uppercase; }
+.btn-ghost-white:hover { border-color: var(--white); background: rgba(255,255,255,0.07); }
+.btn-white { display: inline-flex; align-items: center; gap: 9px; background: var(--white); color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; padding: 13px 30px; border-radius: 3px; }
+.sec { padding: 70px 5%; }
+.sec-dark { background: var(--navy); }
+.sec-lbl { display: inline-flex; align-items: center; gap: 8px; color: var(--orange); font-size: 0.73rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; }
+.sec-lbl::before { content: ''; width: 20px; height: 2px; background: var(--orange); display: block; }
+.sec-h { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 800; text-transform: uppercase; line-height: 1.05; color: var(--navy); margin-bottom: 10px; }
+.sec-h-w { color: var(--white); }
+.sec-p { font-size: 0.97rem; line-height: 1.65; color: var(--text-light); max-width: 540px; }
+.sec-p-w { color: rgba(255,255,255,0.62); }
+.page-hero { background: var(--navy); padding: 60px 5%; position: relative; overflow: hidden; }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 18px; }
+.breadcrumb a { color: rgba(255,255,255,0.45); }
+.breadcrumb a:hover { color: var(--orange); }
+.breadcrumb span { color: var(--orange); }
+.page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; color: var(--white); text-transform: uppercase; line-height: 1.05; margin-bottom: 14px; }
+.page-hero h1 em { color: var(--orange); font-style: normal; }
+.page-hero p { font-size: 1.02rem; color: rgba(255,255,255,0.7); max-width: 560px; margin-bottom: 28px; line-height: 1.6; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.45fr; gap: 52px; align-items: start; }
+.cd-item { display: flex; align-items: flex-start; gap: 13px; margin-bottom: 16px; padding: 18px 18px; background: rgba(255,255,255,0.05); border-radius: 4px; border-left: 3px solid var(--orange); }
+.cd-item svg { color: var(--orange); flex-shrink: 0; margin-top: 2px; }
+.cd-lbl { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
+.cd-val { font-size: 1.05rem; font-weight: 700; color: var(--white); }
+.cd-val a { color: var(--white); }
+.cd-val a:hover { color: var(--orange); }
+.cform-box { background: var(--white); border-radius: 5px; padding: 40px 36px; box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
+.cform-box h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 800; text-transform: uppercase; color: var(--navy); margin-bottom: 4px; }
+.cform-box .sub { font-size: 0.86rem; color: var(--text-light); margin-bottom: 22px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+.cform label { display: block; font-size: 0.73rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text); margin-bottom: 4px; }
+.cform input, .cform select, .cform textarea { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 3px; font-family: 'Barlow', sans-serif; font-size: 0.9rem; color: var(--text); background: var(--off-white); margin-bottom: 12px; appearance: none; transition: border-color 0.2s, background 0.2s; }
+.cform input:focus, .cform select:focus, .cform textarea:focus { outline: none; border-color: var(--blue); background: var(--white); }
+.cform textarea { height: 110px; resize: vertical; }
+.cform .fld { margin-bottom: 0; }
+.btn-sub { width: 100%; background: var(--orange); color: var(--white); font-family: 'Barlow', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 16px; border: none; border-radius: 3px; cursor: pointer; margin-top: 4px; transition: background 0.2s; }
+.btn-sub:hover { background: var(--orange-dark); }
+.areas-section { background: var(--off-white); padding: 70px 5%; }
+.areas-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 10px; margin-top: 28px; }
+.area-pill { background: var(--white); border: 1.5px solid var(--border); border-radius: 4px; padding: 12px 16px; text-align: center; font-size: 0.86rem; font-weight: 600; color: var(--text); transition: all 0.2s; }
+.area-pill:hover { border-color: var(--orange); color: var(--orange); }
+.emergency { background: var(--orange); padding: 28px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+.emrg-txt { display: flex; align-items: center; gap: 14px; color: var(--white); }
+.emrg-txt h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.55rem; font-weight: 800; text-transform: uppercase; }
+.emrg-txt p { font-size: 0.88rem; opacity: 0.9; }
+footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); }
+.foot-grid { display: grid; grid-template-columns: 1.55fr 1fr 1fr 1fr; gap: 36px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.foot-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--white); display: block; margin-bottom: 10px; }
+.foot-logo span { color: var(--orange); }
+.foot-desc { font-size: 0.84rem; line-height: 1.63; margin-bottom: 18px; max-width: 255px; }
+.foot-ph { color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 700; }
+.foot-col-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--white); margin-bottom: 14px; padding-bottom: 9px; border-bottom: 2px solid var(--orange); display: inline-block; }
+.foot-links { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.foot-links a { font-size: 0.84rem; color: rgba(255,255,255,0.42); display: flex; gap: 5px; }
+.foot-links a::before { content: '›'; color: var(--orange); }
+.foot-links a:hover { color: rgba(255,255,255,0.88); }
+.foot-hrs .hr-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.85rem; }
+.foot-hrs .hr-row:last-child { border: none; }
+.foot-hrs .day { color: rgba(255,255,255,0.42); }
+.foot-hrs .time { color: var(--orange); font-weight: 600; }
+.emrg-box { margin-top: 14px; padding: 11px 14px; background: rgba(240,112,32,0.12); border-radius: 4px; border-left: 3px solid var(--orange); }
+.emrg-box .e-lbl { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); }
+.emrg-box .e-num { font-size: 0.93rem; font-weight: 700; color: var(--white); }
+.foot-bottom { padding: 16px 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.76rem; flex-wrap: wrap; gap: 6px; }
+@media (max-width: 1100px) { .areas-grid { grid-template-columns: repeat(4,1fr); } .foot-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .topbar-left .topbar-tag:not(:first-child) { display: none; } .nav-links { display: none; } .contact-grid { grid-template-columns: 1fr; } .areas-grid { grid-template-columns: repeat(2,1fr); } .foot-grid { grid-template-columns: 1fr; } .emergency { flex-direction: column; } .form-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Northern Beaches, Sydney</div>
+    <div class="topbar-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sun · All Hours</div>
+    <span class="topbar-badge">⚡ 24/7 Emergency</span>
+  </div>
+  <a href="tel:0428000488" class="topbar-phone">0428 000 488</a>
+</div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">RIVUS <span class="badge">Plumbing</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="has-dropdown">
+        <a href="index.html#services">Services</a>
+        <ul class="nav-dropdown">
+          <li><a href="services/tap-installation-repair.html">Tap Installation &amp; Repair</a></li>
+          <li><a href="services/toilet-repair-install.html">Toilet Repair &amp; Installation</a></li>
+          <li><a href="services/leak-detection.html">Leak Detection</a></li>
+          <li><a href="services/pipe-repair.html">Pipe Repair</a></li>
+          <li><a href="services/hot-water-systems.html">Hot Water Systems</a></li>
+          <li><a href="services/sewer-repair-cleaning.html">Sewer Repair &amp; Cleaning</a></li>
+          <li><a href="services/shower-installation.html">Shower Installation</a></li>
+          <li><a href="services/outdoor-plumbing.html">Outdoor Plumbing</a></li>
+          <li><a href="services/sump-pump.html">Sump Pump</a></li>
+          <li><a href="services/emergency-plumbing.html">Emergency Plumbing</a></li>
+          <li><a href="services/general-maintenance.html">General Maintenance</a></li>
+        </ul>
+      </li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+      <li><a href="tel:0428000488" class="nav-cta">📞 Call Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Contact Us</span></div>
+  <h1>Get In <em>Touch</em></h1>
+  <p>Available 24/7 across Sydney's Northern Beaches. Call us or fill in the form below — we'll get back to you fast with a free, no-obligation quote.</p>
+  <div class="hero-btns">
+    <a href="tel:0428000488" class="btn-orange">Call 0428 000 488</a>
+  </div>
+</div>
+
+<section class="sec sec-dark">
+  <div class="contact-grid">
+    <div>
+      <div class="sec-lbl">Contact Details</div>
+      <h2 class="sec-h sec-h-w">Reach Out Anytime</h2>
+      <p class="sec-p sec-p-w" style="margin-bottom:26px;">Whether it's an emergency or routine work, we're here to help. Choose the method that suits you best.</p>
+      <div class="cd-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><div class="cd-lbl">Phone (24/7)</div><div class="cd-val"><a href="tel:0428000488">0428 000 488</a></div></div></div>
+      <div class="cd-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div><div class="cd-lbl">Email</div><div class="cd-val"><a href="mailto:info@rivusplumbing.com.au">info@rivusplumbing.com.au</a></div></div></div>
+      <div class="cd-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="cd-lbl">Service Area</div><div class="cd-val">Northern Beaches, Sydney NSW</div></div></div>
+      <div class="cd-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><div class="cd-lbl">Hours</div><div class="cd-val">24/7 — All Days</div></div></div>
+    </div>
+    <div class="cform-box">
+      <h3>Request a Free Quote</h3>
+      <p class="sub">Fill in the form and we'll get back to you shortly.</p>
+      <form class="cform" onsubmit="return false;">
+        <div class="form-row"><div class="fld"><label>First Name</label><input type="text" placeholder="John"></div><div class="fld"><label>Last Name</label><input type="text" placeholder="Smith"></div></div>
+        <div class="form-row"><div class="fld"><label>Phone</label><input type="tel" placeholder="04XX XXX XXX"></div><div class="fld"><label>Email</label><input type="email" placeholder="you@email.com"></div></div>
+        <div class="fld"><label>Suburb</label><input type="text" placeholder="e.g. Manly, Mona Vale"></div>
+        <div class="fld"><label>Select a Service</label>
+          <select>
+            <option value="" disabled selected>Choose a service...</option>
+            <option>Tap Repair / Installation</option>
+            <option>Blocked Drain</option>
+            <option>Hot Water System</option>
+            <option>Leak Detection</option>
+            <option>Toilet Repair / Installation</option>
+            <option>Pipe Repair</option>
+            <option>Sewer / Drainage</option>
+            <option>Shower Installation</option>
+            <option>Outdoor Plumbing</option>
+            <option>Sump Pump</option>
+            <option>Emergency Plumbing</option>
+            <option>General Maintenance</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fld"><label>Message</label><textarea placeholder="Tell us about the issue..."></textarea></div>
+        <button type="submit" class="btn-sub">Send My Request →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section">
+  <div class="sec-lbl">Service Areas</div>
+  <h2 class="sec-h">We Service the Entire Northern Beaches</h2>
+  <div class="areas-grid">
+    <div class="area-pill">Manly</div><div class="area-pill">Mosman</div><div class="area-pill">Dee Why</div><div class="area-pill">Cromer</div><div class="area-pill">Brookvale</div><div class="area-pill">Collaroy</div>
+    <div class="area-pill">Narrabeen</div><div class="area-pill">Mona Vale</div><div class="area-pill">Avalon</div><div class="area-pill">Newport</div><div class="area-pill">Palm Beach</div><div class="area-pill">Frenchs Forest</div>
+    <div class="area-pill">Forestville</div><div class="area-pill">Belrose</div><div class="area-pill">Terrey Hills</div><div class="area-pill">Allambie Heights</div><div class="area-pill">Curl Curl</div><div class="area-pill">Freshwater</div>
+  </div>
+</section>
+
+<div class="emergency">
+  <div class="emrg-txt"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><h2>Plumbing Emergency? We're Available 24/7</h2><p>Don't wait — call Rivus Plumbing now.</p></div></div>
+  <a href="tel:0428000488" class="btn-white">Call 0428 000 488</a>
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div><span class="foot-logo">RIVUS<span>.</span></span><p class="foot-desc">Reliable, licensed plumbing across Sydney's Northern Beaches. Available 24/7 for emergencies and all plumbing needs.</p><a href="tel:0428000488" class="foot-ph">0428 000 488</a></div>
+    <div><div class="foot-col-title">Quick Links</div><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="index.html#services">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div><div class="foot-col-title">Our Services</div><ul class="foot-links"><li><a href="services/tap-installation-repair.html">Tap Repair</a></li><li><a href="services/hot-water-systems.html">Hot Water Systems</a></li><li><a href="services/leak-detection.html">Leak Detection</a></li><li><a href="services/sewer-repair-cleaning.html">Sewer Repair</a></li><li><a href="services/emergency-plumbing.html">Emergency Plumbing</a></li></ul></div>
+    <div><div class="foot-col-title">Working Hours</div><div class="foot-hrs"><div class="hr-row"><span class="day">Monday – Friday</span><span class="time">24/7</span></div><div class="hr-row"><span class="day">Saturday</span><span class="time">24/7</span></div><div class="hr-row"><span class="day">Sunday</span><span class="time">24/7</span></div><div class="hr-row"><span class="day">Public Holidays</span><span class="time">24/7</span></div></div><div class="emrg-box"><div class="e-lbl">Emergency Line</div><div class="e-num">0428 000 488</div></div></div>
+  </div>
+  <div class="foot-bottom"><span>© 2025 Rivus Plumbing. All Rights Reserved. Northern Beaches, Sydney NSW.</span><span>Licensed &amp; Insured Plumber</span></div>
+</footer>
+</body>
+</html>

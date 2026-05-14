@@ -85,8 +85,8 @@ nav { background: var(--white); border-bottom: 3px solid var(--orange); position
 .emrg-txt p { font-size: 0.88rem; opacity: 0.9; margin-top: 2px; }
 footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); }
 .foot-grid { display: grid; grid-template-columns: 1.55fr 1fr 1fr 1fr; gap: 36px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.07); }
-.foot-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--white); display: block; margin-bottom: 10px; }
-.foot-logo span { color: var(--orange); }
+.foot-logo { display: inline-flex; margin-bottom: 10px; }
+.foot-logo img { height: 44px; width: auto; display: block; object-fit: contain; }
 .foot-desc { font-size: 0.84rem; line-height: 1.63; margin-bottom: 18px; max-width: 255px; }
 .foot-ph { display: flex; align-items: center; gap: 9px; color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 700; }
 .foot-col-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--white); margin-bottom: 14px; padding-bottom: 9px; border-bottom: 2px solid var(--orange); display: inline-block; }
@@ -222,7 +222,7 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
 
 <footer>
   <div class="foot-grid">
-    <div><span class="foot-logo">RIVUS<span>.</span></span><p class="foot-desc">Reliable, licensed plumbing across Sydney's Northern Beaches. Available 24/7 for emergencies and all plumbing needs.</p><a href="tel:0428000488" class="foot-ph">0428 000 488</a></div>
+    <div><span class="foot-logo"><img src="https://lh3.googleusercontent.com/p/AF1QipNlOPrDbMVO1kvt4Lftj9RsFRnfpXwowr0KtcaD=s680-w680-h510-rw" alt="Rivus Plumbing logo"></span><p class="foot-desc">Reliable, licensed plumbing across Sydney's Northern Beaches. Available 24/7 for emergencies and all plumbing needs.</p><a href="tel:0428000488" class="foot-ph">0428 000 488</a></div>
     <div><div class="foot-col-title">Quick Links</div><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="index.html#services">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
     <div><div class="foot-col-title">Our Services</div>      <ul class="foot-links">
         <li><a href="services/tap-installation-repair.html">Tap Installation &amp; Repair</a></li>

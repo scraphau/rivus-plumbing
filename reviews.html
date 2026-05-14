@@ -19,8 +19,8 @@ a { text-decoration: none; color: inherit; }
 .topbar-phone:hover { color: var(--orange); }
 nav { background: var(--white); border-bottom: 3px solid var(--orange); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 68px; }
-.nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: var(--navy); display: flex; align-items: center; gap: 10px; }
-.nav-logo .badge { background: var(--orange); color: var(--white); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; margin-top: 4px; }
+.nav-logo { display: inline-flex; align-items: center; }
+.nav-logo img { height: 54px; width: auto; display: block; object-fit: contain; }
 .nav-links { display: flex; list-style: none; gap: 2px; }
 .nav-links a { padding: 8px 13px; font-size: 0.87rem; font-weight: 600; color: var(--text); border-radius: 3px; transition: color 0.2s, background 0.2s; }
 .nav-links a:hover, .nav-links a.active { color: var(--blue); background: var(--off-white); }
@@ -105,7 +105,9 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
 </div>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">RIVUS <span class="badge">Plumbing</span></a>
+    <a href="index.html" class="nav-logo">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipNlOPrDbMVO1kvt4Lftj9RsFRnfpXwowr0KtcaD=s680-w680-h510-rw" alt="Rivus Plumbing logo">
+    </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>

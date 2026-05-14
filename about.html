@@ -11,7 +11,7 @@ html { scroll-behavior: smooth; }
 :root { --navy: #0b1f3a; --navy-mid: #142d52; --blue: #1a5ca8; --orange: #f07020; --orange-dark: #d45f10; --white: #ffffff; --off-white: #f4f7fb; --text: #1a2538; --text-light: #4a5a72; --border: #d0dae8; }
 body { font-family: 'Barlow', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
 a { text-decoration: none; color: inherit; }
-.topbar { background: var(--navy); padding: 9px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.topbar { background: var(--navy); padding: 9px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; position: sticky; top: 0; z-index: 1200; }
 .topbar-left { display: flex; align-items: center; gap: 20px; color: rgba(255,255,255,0.65); font-size: 0.82rem; }
 .topbar-tag { display: flex; align-items: center; gap: 7px; }
 .topbar-badge { background: var(--orange); color: var(--white); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; }

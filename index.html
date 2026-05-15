@@ -43,6 +43,8 @@ nav { background: var(--white); border-bottom: 3px solid var(--orange); position
 .nav-links a:hover { color: var(--blue); background: var(--off-white); }
 .nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 10px 20px !important; font-weight: 700 !important; justify-self: end; }
 .nav-cta:hover { background: var(--orange-dark) !important; }
+.mobile-sticky-call { display: none; }
+
 .nav-links .has-dropdown { position: relative; }
 .nav-links .has-dropdown > a::after { content: ' ▾'; font-size: 0.7rem; opacity: 0.7; }
 .nav-dropdown { display: none; position: absolute; top: 100%; left: 0; background: var(--white); min-width: 240px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-top: 3px solid var(--orange); border-radius: 0 0 4px 4px; padding: 8px 0; list-style: none; z-index: 200; }
@@ -208,6 +210,9 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
 @media (max-width: 768px) {
   .topbar-left .topbar-tag:not(:first-child) { display: none; }
   .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .mobile-sticky-call { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 300; background: var(--orange); color: var(--white); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; justify-content: center; align-items: center; padding: 14px 18px calc(14px + env(safe-area-inset-bottom)); box-shadow: 0 -8px 24px rgba(0,0,0,0.25); }
+  body { padding-bottom: 72px; }
   .trust-strip { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1fr; }
   .svc-grid { grid-template-columns: 1fr 1fr; }
@@ -609,6 +614,7 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
     <span>Licensed & Insured Plumber</span>
   </div>
 </footer>
+<a href="tel:0428000488" class="mobile-sticky-call">📞 Call Now · 0428 000 488</a>
 
 </body>
 </html>

@@ -18,13 +18,13 @@ a { text-decoration: none; color: inherit; }
 .topbar-phone { color: var(--white); font-size: 1.05rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
 .topbar-phone:hover { color: var(--orange); }
 nav { background: var(--white); border-bottom: 3px solid var(--orange); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
-.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 68px; }
-.nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+.nav-inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 5%; height: 68px; }
+.nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: var(--navy); display: flex; align-items: center; gap: 10px; justify-self: start; }
 .nav-logo .badge { background: var(--orange); color: var(--white); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; margin-top: 4px; }
-.nav-links { display: flex; list-style: none; gap: 2px; }
+.nav-links { display: flex; list-style: none; gap: 2px; justify-self: center; }
 .nav-links a { padding: 8px 13px; font-size: 0.87rem; font-weight: 600; color: var(--text); border-radius: 3px; transition: color 0.2s, background 0.2s; }
 .nav-links a:hover, .nav-links a.active { color: var(--blue); background: var(--off-white); }
-.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 10px 20px !important; font-weight: 700 !important; }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 10px 20px !important; font-weight: 700 !important; justify-self: end; }
 .nav-cta:hover { background: var(--orange-dark) !important; }
 .nav-links .has-dropdown { position: relative; }
 .nav-links .has-dropdown > a::after { content: ' ▾'; font-size: 0.7rem; opacity: 0.7; }
@@ -120,27 +120,12 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li class="has-dropdown">
-        <a href="index.html#services">Services</a>
-        <ul class="nav-dropdown">
-          <li><a href="services/tap-installation-repair.html">Tap Installation &amp; Repair</a></li>
-          <li><a href="services/toilet-repair-install.html">Toilet Repair &amp; Installation</a></li>
-          <li><a href="services/leak-detection.html">Leak Detection</a></li>
-          <li><a href="services/pipe-repair.html">Pipe Repair</a></li>
-          <li><a href="services/hot-water-systems.html">Hot Water Systems</a></li>
-          <li><a href="services/sewer-repair-cleaning.html">Sewer Repair &amp; Cleaning</a></li>
-          <li><a href="services/shower-installation.html">Shower Installation</a></li>
-          <li><a href="services/outdoor-plumbing.html">Outdoor Plumbing</a></li>
-          <li><a href="services/sump-pump.html">Sump Pump</a></li>
-          <li><a href="services/emergency-plumbing.html">Emergency Plumbing</a></li>
-          <li><a href="services/general-maintenance.html">General Maintenance</a></li>
-        </ul>
-      </li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="service-areas.html">Service Areas</a></li>
       <li><a href="reviews.html">Reviews</a></li>
-      
-      <li><a href="contact.html" class="active">Contact Us</a></li>
-      <li><a href="tel:0428000488" class="nav-cta">📞 Call Now</a></li>
-    </ul>
+      <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    <a href="tel:0428000488" class="nav-cta">📞 Call Now</a>
   </div>
 </nav>
 
@@ -207,7 +192,8 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
 <footer>
   <div class="foot-grid">
     <div><span class="foot-logo">RIVUS<span>.</span></span><p class="foot-desc">Reliable, licensed plumbing across Sydney's Northern Beaches. Available 24/7 for emergencies and all plumbing needs.</p><a href="tel:0428000488" class="foot-ph">0428 000 488</a></div>
-    <div><div class="foot-col-title">Quick Links</div><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="index.html#services">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div><div class="foot-col-title">Quick Links</div><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="index.html#services">Services</a></li><li><a href="service-areas.html">Service Areas</a></li>
+      <li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
     <div><div class="foot-col-title">Our Services</div>      <ul class="foot-links">
         <li><a href="services/tap-installation-repair.html">Tap Installation &amp; Repair</a></li>
         <li><a href="services/drain-cleaning.html">Drain Cleaning</a></li>

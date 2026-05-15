@@ -56,6 +56,13 @@ nav { background: var(--white); border-bottom: 3px solid var(--orange); position
 .mobile-menu-list a { display: block; padding: 11px 16px; font-size: 0.9rem; font-weight: 600; color: var(--text); }
 .mobile-menu-list a:hover { background: var(--off-white); color: var(--blue); }
 
+.mobile-submenu summary { list-style: none; cursor: pointer; padding: 11px 16px; font-size: 0.9rem; font-weight: 600; color: var(--text); border-top: 1px solid var(--border); }
+.mobile-submenu summary::-webkit-details-marker { display: none; }
+.mobile-submenu summary::after { content: '▾'; float: right; font-size: 0.75rem; opacity: 0.7; }
+.mobile-submenu-list { display: none; background: var(--off-white); }
+.mobile-submenu[open] .mobile-submenu-list { display: block; }
+.mobile-submenu-list a { padding-left: 28px; font-size: 0.84rem; }
+
 .nav-links .has-dropdown { position: relative; }
 .nav-links .has-dropdown > a::after { content: ' ▾'; font-size: 0.7rem; opacity: 0.7; }
 .nav-dropdown { display: none; position: absolute; top: 100%; left: 0; background: var(--white); min-width: 240px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-top: 3px solid var(--orange); border-radius: 0 0 4px 4px; padding: 8px 0; list-style: none; z-index: 200; }
@@ -305,18 +312,22 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
       <div class="mobile-menu-list">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
-        <a href="index.html#services">Services</a>
-        <a href="services/tap-installation-repair.html">Tap Installation &amp; Repair</a>
-        <a href="services/drain-cleaning.html">Drain Cleaning</a>
-        <a href="services/leak-detection.html">Leak Detection</a>
-        <a href="services/pipe-repair.html">Pipe Repair</a>
-        <a href="services/hot-water-systems.html">Hot Water Systems</a>
-        <a href="services/sewer-repair-cleaning.html">Sewer Repair &amp; Cleaning</a>
-        <a href="services/shower-installation.html">Shower Installation</a>
-        <a href="services/outdoor-plumbing.html">Outdoor Plumbing</a>
-        <a href="services/emergency-plumbing.html">Emergency Plumbing</a>
-        <a href="services/general-maintenance.html">General Maintenance</a>
-        <a href="services/sump-pump.html">Sump Pump Services</a>
+        <details class="mobile-submenu">
+          <summary>Services</summary>
+          <div class="mobile-submenu-list">
+            <a href="services/tap-installation-repair.html">Tap Installation &amp; Repair</a>
+            <a href="services/drain-cleaning.html">Drain Cleaning</a>
+            <a href="services/leak-detection.html">Leak Detection</a>
+            <a href="services/pipe-repair.html">Pipe Repair</a>
+            <a href="services/hot-water-systems.html">Hot Water Systems</a>
+            <a href="services/sewer-repair-cleaning.html">Sewer Repair &amp; Cleaning</a>
+            <a href="services/shower-installation.html">Shower Installation</a>
+            <a href="services/outdoor-plumbing.html">Outdoor Plumbing</a>
+            <a href="services/emergency-plumbing.html">Emergency Plumbing</a>
+            <a href="services/general-maintenance.html">General Maintenance</a>
+            <a href="services/sump-pump.html">Sump Pump Services</a>
+          </div>
+        </details>
         <a href="service-areas.html">Service Areas</a>
         <a href="reviews.html">Reviews</a>
         <a href="contact.html">Contact Us</a>

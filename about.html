@@ -24,7 +24,7 @@ nav { background: var(--white); border-bottom: 3px solid var(--orange); position
 .nav-links { display: flex; list-style: none; gap: 2px; justify-self: center; }
 .nav-links a { padding: 8px 13px; font-size: 0.87rem; font-weight: 600; color: var(--text); border-radius: 3px; transition: color 0.2s, background 0.2s; }
 .nav-links a:hover, .nav-links a.active { color: var(--blue); background: var(--off-white); }
-.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 10px 20px !important; font-weight: 700 !important; }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 10px 20px !important; font-weight: 700 !important; justify-self: end; }
 .nav-cta:hover { background: var(--orange-dark) !important; }
 .nav-links .has-dropdown { position: relative; }
 .nav-links .has-dropdown > a::after { content: ' ▾'; font-size: 0.7rem; opacity: 0.7; }
@@ -128,8 +128,8 @@ footer { background: #060f1d; padding: 52px 5% 0; color: rgba(255,255,255,0.5); 
       <li><a href="service-areas.html">Service Areas</a></li>
       <li><a href="reviews.html">Reviews</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="tel:0428000488" class="nav-cta">📞 Call Now</a></li>
-    </ul>
+      </ul>
+    <a href="tel:0428000488" class="nav-cta">📞 Call Now</a>
   </div>
 </nav>
 

@@ -29,6 +29,7 @@ nav { background: var(--white); border-bottom: 3px solid var(--orange); position
 .mobile-menu { display: none; justify-self: end; position: relative; }
 .mobile-menu summary { list-style: none; cursor: pointer; width: 46px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--border); border-radius: 4px; background: var(--white); }
 .mobile-menu summary::-webkit-details-marker { display: none; }
+.mobile-menu summary::marker { content: ""; }
 .mobile-menu .burger, .mobile-menu .burger::before, .mobile-menu .burger::after { width: 20px; height: 2.5px; background: var(--navy); border-radius: 2px; display: block; content: ""; }
 .mobile-menu .burger { position: relative; }
 .mobile-menu .burger::before { position: absolute; top: -6px; left: 0; }
@@ -39,7 +40,9 @@ nav { background: var(--white); border-bottom: 3px solid var(--orange); position
 .mobile-menu-list a:hover { background: var(--off-white); color: var(--blue); }
 .mobile-submenu summary { display:block; width:100%; list-style: none; cursor: pointer; padding: 11px 16px; font-size: 0.9rem; font-weight: 600; color: var(--text); border-top: 1px solid var(--border); }
 .mobile-submenu summary::-webkit-details-marker { display: none; }
+.mobile-submenu summary::marker { content: ""; }
 .mobile-submenu summary::after { content: "▾"; float: right; font-size: 0.75rem; opacity: 0.7; }
+.mobile-submenu summary { padding-left: 16px; }
 .mobile-submenu-list { display: none; background: var(--off-white); }
 .mobile-submenu[open] .mobile-submenu-list { display: block; }
 .mobile-submenu-list a { padding-left: 28px; font-size: 0.84rem; }
